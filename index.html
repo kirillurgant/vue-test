@@ -8,6 +8,100 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <div id="app2">
+        <span v-bind:title="message">To point the cursor on me.</span>
+    </div>
+
+    <div id="app3">
+        <p v-if="see">Now I can see</p>
+    </div>
+
+    <div id="app4">
+        <ul>
+            <li v-for="item in notes">
+                {{ item.title }}
+            </li>
+        </ul>
+    </div>
+
+    <div id="app5">
+        <p>{{ message }}</p>
+        <button v-on:click="revertMessageHandler">Revert message</button>
+    </div>
+
+    <div id="app6">
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: "Hello, World!"
+            }
+        });
+
+        app.message = "New message";
+
+        var app2 = new Vue({
+            el: "#app2",
+            data: {
+                message: "Tooltip there!"
+            }
+        });
+
+        var app3 = new Vue({
+            el: "#app3",
+            data: {
+                see: true
+            }
+        });
+
+        var app4 = new Vue({
+            el: "#app4",
+            data: {
+                notes: [
+                    {
+                        title: "Harry Potter",
+                        text: "qweqwe qweqwe"
+                    },
+                    {
+                        title: "The Elder Scrolls",
+                        text: "zcvbcxb zdcv"
+                    }
+                ]
+            }
+        });
+
+        app4.notes.push({
+            title: "Pray",
+            text: "fghjfgh fghj fgh fgh j"
+        });
+
+        var app5 = new Vue({
+            el: "#app5",
+            data: {
+                message: "Hello, Vue!"
+            },
+            methods: {
+                revertMessageHandler: function () {
+                    this.message = this.message.split('').reverse().join('');
+                }
+            }
+        });
+
+        var app6 = new Vue({
+            el: "#app6",
+            data: {
+                message: "test"
+            }
+        });
+    </script>
 </body>
 </html>
