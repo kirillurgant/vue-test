@@ -11,7 +11,8 @@
                 list: [
                     'qwe',
                     'asd',
-                    'zxc'
+                    'zxc',
+                    'vbn'
                 ]
             }
         }
