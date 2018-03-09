@@ -2,7 +2,7 @@ const path = require('path');
 
 const PATHS = {
     src: path.join(__dirname, 'src'),
-    dist: path.join(__dirname, 'bundles/js')
+    dist: path.join(__dirname, 'dist/js')
 };
 
 module.exports = {
