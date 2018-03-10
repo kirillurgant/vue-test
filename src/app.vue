@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="b-wrapper">
         <h1>{{ text }}</h1>
         <step></step>
     </div>
