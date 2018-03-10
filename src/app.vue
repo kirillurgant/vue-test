@@ -27,7 +27,9 @@
                 <div class="b-form__item">
                     <radio_list></radio_list>
                 </div>
-                <div class="b-form__item"></div>
+                <div class="b-form__item">
+                    <table_component></table_component>
+                </div>
             </form>
         </step>
     </div>
@@ -39,10 +41,11 @@
     import radio from './components/radio';
     import counter from './components/counter';
     import radio_list from './components/radio_list';
+    import table_component from './components/table';
 
     export default {
         name: 'app',
-        components: {step, radio, counter, radio_list},
+        components: {step, radio, counter, radio_list, table_component},
         store
     }
 </script>
