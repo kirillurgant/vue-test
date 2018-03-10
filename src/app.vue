@@ -24,7 +24,9 @@
               step-name="Обслуживание"
               step-description="Выберите подходящий тип обслуживания системы «AutoИнтеллект», исходя из используемого функционала">
             <form class="b-form">
-                <div class="b-form__item"></div>
+                <div class="b-form__item">
+                    <radio_list></radio_list>
+                </div>
                 <div class="b-form__item"></div>
             </form>
         </step>
@@ -36,10 +38,11 @@
     import step from './components/step';
     import radio from './components/radio';
     import counter from './components/counter';
+    import radio_list from './components/radio_list';
 
     export default {
         name: 'app',
-        components: {step, radio, counter},
+        components: {step, radio, counter, radio_list},
         store
     }
 </script>

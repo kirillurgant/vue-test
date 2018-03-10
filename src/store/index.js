@@ -27,6 +27,13 @@ const store = new Vuex.Store({
                 input: {
                     value: 1
                 }
+            },
+            service: {
+                title: 'Что обслуживаем?',
+                input: {
+                    options: ['Autoинтеллект', 'Autoинтеллект и Веб-вход', 'Autoинтеллект и Веб-вход на вашем сервере'],
+                    value: 'Autoинтеллект'
+                }
             }
         }
     },
