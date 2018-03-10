@@ -1,16 +1,75 @@
-h1 {
-  color: red;
-  font-family: Ubuntu Mono;
-}
-
-p {
-  color: gray;
-
-  span {
-    color: palevioletred;
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
 }
 
 .b-wrapper {
-  background: #efb3ad;
+  width: 510px;
+  padding: 60px;
+}
+
+.b-step {
+  margin-bottom: 50px;
+
+  &__header {
+    color: #3c3e3c;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 0 0 20px 0;
+
+    &_name {
+      color: #00a5ff;
+    }
+  }
+
+  &__description {
+    color: #73787a;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 35px 0;
+  }
+}
+
+.b-form {
+  &__item {
+    border-radius: 5px;
+    background-color: #f0f8fa;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+
+    &_green {
+      background-color: #eef9e9;
+    }
+
+    &_center {
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  &__item-label {
+    display: inline-block;
+    color: #2e4c64;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+
+    &_green {
+      color: #77bb4c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
+
+.b-hr {
+  border: 0;
+  height: 1px;
+  background-color: #d0d0d0;
+  margin: 0 0 50px 0;
+  padding: 0;
 }
