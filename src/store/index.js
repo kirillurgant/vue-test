@@ -25,7 +25,7 @@ const store = new Vuex.Store({
             counter: {
                 title: 'Рабочих мест',
                 input: {
-                    value: '1'
+                    value: 1
                 }
             }
         }

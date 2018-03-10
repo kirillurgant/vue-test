@@ -11,7 +11,7 @@
                     <radio field-type="ishop"></radio>
                 </div>
                 <div class="b-form__item">
-                    <div class="b-form__item-label">Рабочих мест</div>
+                    <counter></counter>
                 </div>
                 <div class="b-form__item b-form__item_green b-form__item_center">
                     <div class="b-form__item-label b-form__item-label_green">
@@ -35,10 +35,11 @@
     import store from './store/index';
     import step from './components/step';
     import radio from './components/radio';
+    import counter from './components/counter';
 
     export default {
         name: 'app',
-        components: {step, radio},
+        components: {step, radio, counter},
         store
     }
 </script>
