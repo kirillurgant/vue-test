@@ -4,6 +4,7 @@
 ```bash
 cd project_dir
 npm i
+npm i -g gulp
 ```
 
 ## Development mode

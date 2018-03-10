@@ -1,20 +1,22 @@
 <template>
     <div id="app">
         <h1>{{ text }}</h1>
-        <some_component></some_component>
+        <step></step>
     </div>
 </template>
 
 <script>
-    import some_component from './components/some_component';
+    import store from './store/index';
+    import step from './components/step';
 
     export default {
         name: 'app',
-        data () {
+        data() {
             return {
                 text: 'some text there'
             }
         },
-        components: {some_component}
+        components: {step},
+        store
     }
 </script>
