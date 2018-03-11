@@ -1,6 +1,15 @@
 <template>
     <div class="b-form-field b-form-field_flex">
-        <div class="b-form-field__title">{{ formField.title }}</div>
+        <div class="b-form-field__title">
+            {{ formField.title }}
+            <v-popover v-if="formField.tooltip">
+                <span class="b-tooltip">?</span>
+                <template slot="popover">
+                    <h3 class="popover-inner__title">{{ formField.tooltip.title }}</h3>
+                    <div class="popover-inner__body">{{ formField.tooltip.body }}</div>
+                </template>
+            </v-popover>
+        </div>
         <div class="b-form-field__input">
             <div class="b-radio">
                 <input type="radio" class="b-radio__input"
