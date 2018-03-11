@@ -16,7 +16,16 @@
                 </td>
             </tr>
             <tr v-for="feature in formField.features">
-                <td>{{ feature.name }}</td>
+                <td>
+                    {{ feature.name }}
+                    <v-popover v-if="feature.tooltip">
+                        <span class="b-tooltip">?</span>
+                        <template slot="popover">
+                            <h3 class="popover-inner__title">{{ feature.tooltip.title }}</h3>
+                            <div class="popover-inner__body">{{ feature.tooltip.body }}</div>
+                        </template>
+                    </v-popover>
+                </td>
                 <td v-for="option in formField.input.options">
                     {{ featureIsAvailable(feature.name, option.features) }}
                 </td>

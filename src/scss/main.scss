@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "vendors/tooltips";
 @import "global";
 @import "blocks/b-step";
 @import "blocks/b-form";
@@ -6,4 +7,4 @@
 @import "blocks/b-radio";
 @import "blocks/b-counter";
 @import "blocks/b-tooltip";
-@import "vendors/tooltips";
+@import "blocks/b-radio-list";
