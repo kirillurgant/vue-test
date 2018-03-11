@@ -3,14 +3,14 @@
         <div class="b-form-field__title b-form-field__title_bold">{{ formField.title }}</div>
         <div class="b-form-field__input">
             <ul class="b-radio-list">
-                <li class="b-radio-list__item" v-for="item in formField.input.options">
-                    <input class="b-radio-list__input" type="radio"
+                <li class="b-radio-simple" v-for="item in formField.input.options">
+                    <input class="b-radio-simple__input" type="radio"
                            :id="item"
                            name="service"
                            :value="item"
                            :checked="formField.input.value == item"
                            @change="changeFieldValue(item)">
-                    <label class="b-radio-list__label" :for="item">
+                    <label class="b-radio-simple__label" :for="item">
                         {{ item }}
                     </label>
                 </li>

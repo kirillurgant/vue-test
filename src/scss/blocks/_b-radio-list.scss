@@ -4,7 +4,9 @@
   padding: 0;
 
   &__item {}
+}
 
+.b-radio-simple {
   &__input {
     display: none;
   }
@@ -31,6 +33,7 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
+      margin-top: -2px;
     }
 
     &:after {
@@ -45,6 +48,29 @@
       left: 0;
       transform: translateY(-50%);
       margin-left: 5px;
+      margin-top: -2px;
+    }
+
+    &_small {
+      color: #2e4c64;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15px;
+      padding: 25px 0 0 0;
+
+      &:before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:after {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-top: 3px;
+      }
     }
   }
 

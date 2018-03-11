@@ -31,7 +31,7 @@
                             <div class="b-form__item">
                                 <radio_list></radio_list>
                             </div>
-                            <div class="b-form__item">
+                            <div class="b-form__item b-form__item_border">
                                 <table_component></table_component>
                             </div>
                         </form>

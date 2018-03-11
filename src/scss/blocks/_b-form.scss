@@ -1,8 +1,14 @@
 .b-form {
+
   &__item {
     border-radius: 5px;
     background-color: #f0f8fa;
     margin-bottom: 10px;
+
+    &_border {
+      background-color: #fff;
+      border: 10px solid #f0f8fa;
+    }
 
     &_gift {
       background-color: #eef9e9;
