@@ -1,26 +1,26 @@
 <template>
-    <div class="b-form-field">
+    <div class="b-form-field b-form-field_flex">
         <div class="b-form-field__title">{{ formField.title }}</div>
         <div class="b-form-field__input">
             <div class="b-radio">
-                <input type="radio"
+                <input type="radio" class="b-radio__input"
                        :id="formField.input.options[0]"
                        :name="fieldType"
                        :value="formField.input.options[0]"
                        :checked="formField.input.value == formField.input.options[0]"
                        :disabled="disabled"
                        @change="changeFieldValue(formField.input.options[0])">
-                <label :for="formField.input.options[0]">
+                <label class="b-radio__label" :for="formField.input.options[0]">
                     {{ formField.input.options[0] }}
                 </label>
-                <input type="radio"
+                <input type="radio" class="b-radio__input"
                        :id="formField.input.options[1]"
                        :name="fieldType"
                        :value="formField.input.options[1]"
                        :checked="formField.input.value == formField.input.options[1]"
                        :disabled="disabled"
                        @change="changeFieldValue(formField.input.options[1])">
-                <label :for="formField.input.options[1]">
+                <label class="b-radio__label" :for="formField.input.options[1]">
                     {{ formField.input.options[1] }}
                 </label>
             </div>

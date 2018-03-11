@@ -1,37 +1,44 @@
 <template>
-    <div id="app" class="b-wrapper">
-        <step step-number="Шаг 1"
-              step-name="Вводные данные"
-              step-description="Выберите необходимые параметры: язык программирования баз данных и количество рабочих мест">
-            <form class="b-form">
-                <div class="b-form__item">
-                    <radio field-type="db"></radio>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <div class="b-wrapper">
+                    <step step-number="Шаг 1"
+                          step-name="Вводные данные"
+                          step-description="Выберите необходимые параметры: язык программирования баз данных и количество рабочих мест">
+                        <form class="b-form">
+                            <div class="b-form__item">
+                                <radio field-type="db"></radio>
+                            </div>
+                            <div class="b-form__item">
+                                <radio field-type="ishop"></radio>
+                            </div>
+                            <div class="b-form__item">
+                                <counter></counter>
+                            </div>
+                            <div class="b-form__item b-form__item_green b-form__item_center">
+                                <div class="b-form__item b-form__item_gift">
+                                    <span class="b-form__icon"></span>8 часов обучения в подарок!
+                                </div>
+                            </div>
+                        </form>
+                    </step>
+                    <hr class="b-hr">
+                    <step step-number="Шаг 2"
+                          step-name="Обслуживание"
+                          step-description="Выберите подходящий тип обслуживания системы «AutoИнтеллект», исходя из используемого функционала">
+                        <form class="b-form">
+                            <div class="b-form__item">
+                                <radio_list></radio_list>
+                            </div>
+                            <div class="b-form__item">
+                                <table_component></table_component>
+                            </div>
+                        </form>
+                    </step>
                 </div>
-                <div class="b-form__item">
-                    <radio field-type="ishop"></radio>
-                </div>
-                <div class="b-form__item">
-                    <counter></counter>
-                </div>
-                <div class="b-form__item b-form__item_green b-form__item_center">
-                    <div class="b-form__item-label b-form__item-label_green">
-                        <img src="dist/images/gift.svg" alt="gift"> 8 часов обучения в подарок!</div>
-                </div>
-            </form>
-        </step>
-        <hr class="b-hr">
-        <step step-number="Шаг 2"
-              step-name="Обслуживание"
-              step-description="Выберите подходящий тип обслуживания системы «AutoИнтеллект», исходя из используемого функционала">
-            <form class="b-form">
-                <div class="b-form__item">
-                    <radio_list></radio_list>
-                </div>
-                <div class="b-form__item">
-                    <table_component></table_component>
-                </div>
-            </form>
-        </step>
+            </div>
+        </div>
     </div>
 </template>
 

@@ -1,0 +1,33 @@
+.b-form {
+  &__item {
+    border-radius: 5px;
+    background-color: #f0f8fa;
+    margin-bottom: 10px;
+
+    &_gift {
+      background-color: #eef9e9;
+      color: #77bb4c;
+      font-size: 16px;
+      font-weight: 400;
+      height: 80px;
+      line-height: 80px;
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 21px;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    background: {
+      image: url('../images/gift.svg');
+      size: contain;
+      repeat: no-repeat;
+    };
+  }
+}

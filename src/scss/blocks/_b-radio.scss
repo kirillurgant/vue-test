@@ -1,0 +1,38 @@
+.b-radio {
+  border-radius: 5px;
+  border: 1px solid #e0f1fa;
+  background-color: #ffffff;
+  padding: 5px;
+  width: 160px;
+  text-align: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #ccdce6;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 42px;
+    margin: 0;
+    width: 70px;
+    text-align: center;
+  }
+
+  &__input:checked + &__label {
+    box-shadow: 0 2px 4px rgba(119, 187, 76, 0.6);
+    border-radius: 3px;
+    background-color: #77bb4c;
+    color: #ffffff;
+  }
+
+  &__input:disabled + &__label {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}

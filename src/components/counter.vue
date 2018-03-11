@@ -1,12 +1,13 @@
 <template>
-    <div class="b-form-field">
+    <div class="b-form-field b-form-field_flex">
         <div class="b-form-field__title">{{ formField.title }}</div>
         <div class="b-form-field__input">
             <div class="b-counter">
-                <button @click="dec">-</button>
-                <input type="text"
-                       :value="formField.input.value">
-                <button @click="inc">+</button>
+                <span class="b-counter__button" @click="dec"></span>
+                <div class="b-counter__count">
+                    {{ formField.input.value }}
+                </div>
+                <span class="b-counter__button b-counter__button_inc" @click="inc"></span>
             </div>
         </div>
     </div>

@@ -12,14 +12,18 @@ let src = {
         'src/scss/**/*.scss'
     ],
     css: [
-        'node_modules/normalize.css/normalize.css'
+        'src/fonts/HelveticaNeueCyr/css/*.css'
     ],
     images: [
         'src/images/**/*'
+    ],
+    fonts: [
+        'src/fonts/HelveticaNeueCyr/fonts/*'
     ]
 }, dest = {
     css: 'dist/css',
-    images: 'dist/images'
+    images: 'dist/images',
+    fonts: 'dist/fonts'
 };
 
 gulp.task('scss', () => {
@@ -28,7 +32,9 @@ gulp.task('scss', () => {
     cssStream = gulp.src(src.css);
 
     scssStream = gulp.src(src.scss)
-        .pipe(sass().on('error', sass.logError));
+        .pipe(sass({
+            includePaths: ['node_modules/bootstrap/scss']
+        }).on('error', sass.logError));
 
     return merge(cssStream, scssStream)
         .pipe(autoprefixer())
@@ -43,10 +49,16 @@ gulp.task('images', () => {
         .pipe(gulp.dest(dest.images));
 });
 
+gulp.task('fonts', () => {
+    return gulp.src(src.fonts)
+        .pipe(gulp.dest(dest.fonts));
+});
+
 gulp.task('clean', () => {
     return gulp.src([
         dest.css,
-        dest.images
+        dest.images,
+        dest.fonts
     ]).pipe(clean());
 });
 
@@ -60,6 +72,6 @@ gulp.task('watch', ['default'], () => {
 });
 
 gulp.task('default', ['clean'], () => {
-    return gulp.start(['scss', 'images']);
+    return gulp.start(['scss', 'images', 'fonts']);
 });
 
